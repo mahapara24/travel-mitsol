@@ -8,7 +8,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 const Hero = () => {
   return (
     <section
-      className="relative w-full h-screen overflow-hidden   bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      className="relative w-full h-screen overflow-hidden bg-cover bg-center bg-no-repeat flex items-center justify-center"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       {/* Optional overlay */}
@@ -19,7 +19,7 @@ const Hero = () => {
         {/* X vector on the left */}
         <div className="relative flex flex-col justify-center items-center w-[300px] h-auto mr-8">
           {/* First vector (bottom-left diagonal) */}
-          <div className="absolute transform  opacity-50 w-[300px] md-w- h-[600px] left-[-60px] md:left-[-90px] bottom-[-500px] md:w-[400px] md:h-[800px]">
+          <div className="absolute floating-animation opacity-50 w-[300px] h-[600px] left-[-60px] md:left-[-90px] bottom-[-500px] md:w-[400px] md:h-[800px]">
             <Image
               src={vectorX1}
               alt="Left diagonal vector"
@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
 
           {/* Third vector (overlapping in the center) */}
-          <div className="absolute opacity-50 w-[300px] h-[600px] left-[-60px] md:left-[-90px] top-[-170px] md:top-[-300px] md:w-[400px] md:h-[800px]">
+          <div className="absolute floating-animation opacity-50 w-[300px] h-[600px] left-[-60px] md:left-[-90px] top-[-170px] md:top-[-300px] md:w-[400px] md:h-[800px]">
             <Image
               src={vectorX3}
               alt="Center vector"
@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           {/* Second vector (right-to-left diagonal overlapping the third vector) */}
-          <div className="absolute  opacity-50 w-[200px] h-[150px] left-[-20px] top-[250px] md:left-[-80px] md:top-[220px] z-20 md:w-[250px] md:h-[120px]">
+          <div className="absolute floating-animation opacity-50 w-[200px] h-[150px] left-[-20px] top-[250px] md:left-[-80px]  md:top-[190px] z-20 md:w-[250px] md:h-[120px]">
             <Image
               src={vectorX2}
               alt="Right diagonal vector"
@@ -50,17 +50,17 @@ const Hero = () => {
         </div>
 
         {/* Text on the right side */}
-        <div className="text-white text-left pt-20 z-20 sm:pt-40 md:pt-40 ml-24 text-wrap md:ml-8">
+        <div className="text-white text-left pt-20 z-20 sm:pt-40 md:pt-40 ml-24 text-wrap md:ml-8 fade-in-animation">
           <h1 className="text-[62px] md:text-[118px] mt-10 mr-20 font-extrabold leading-none">
             RELIABLE
             <br /> TRANSPORT
           </h1>
           <div className="mt-4">
-            <p className="mt-4 text-[24px]  md:text-[52px] leading-tight font-extrabold">
+            <p className="mt-4 text-[24px] md:text-[52px] leading-tight font-extrabold">
               SOLUTIONS FOR
               <br /> YOUR FREIGHT
             </p>
-            <button className="mt-6 px-6 flex justify-between space-x-2 items-center py-2 bg-white text-custom-red text-[18px] rounded-full font-normal duration-300 hover:text-white hover:bg-custom-red">
+            <button className="mt-6 px-6 flex justify-between space-x-2 items-center py-2 bg-white text-custom-red text-[18px] rounded-full font-normal duration-300 hover:text-white hover:bg-custom-red fade-in-animation">
               Book Your Free Trial{" "}
               <span className="ml-2">
                 <MdArrowRightAlt size={30} />

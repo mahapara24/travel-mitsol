@@ -7,6 +7,7 @@ export default function Main() {
       <div className="">
         <Hero />
       </div>
+      <div></div>
     </div>
   );
 }

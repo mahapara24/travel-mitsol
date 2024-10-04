@@ -1,11 +1,7 @@
-import Home from "@/app/components/HomePage/Home";
-import React from "react";
-import Hero from "../components/HomePage/Hero";
-
-export default Home = () => {
-  return (
-    <div>
-      <Home />
-    </div>
-  );
+const HomePage = () => {
+  return <div>{/* Your component JSX */}</div>;
 };
+
+HomePage.displayName = "HomePage"; // Add this line
+
+export default HomePage;
