@@ -6,7 +6,6 @@ export default Home = () => {
   return (
     <div>
       <Home />
-      <Hero />
     </div>
   );
 };

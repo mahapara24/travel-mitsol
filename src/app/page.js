@@ -3,8 +3,10 @@ import Hero from "./components/HomePage/Hero";
 
 export default function Main() {
   return (
-    <div>
-      <Hero />
+    <div className="">
+      <div className="">
+        <Hero />
+      </div>
     </div>
   );
 }

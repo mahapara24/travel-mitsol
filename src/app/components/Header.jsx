@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <>
       {/* Small Screen Navbar */}
-      <header className="lg:hidden bg-black text-white py-4">
+      <header className="lg:hidden bg-black text-white py-4 fixed top-0 left-0 w-full z-20">
         <div className="container mx-auto flex justify-between items-center px-4">
           {/* Logo */}
           <div className="flex items-center space-x-4">
@@ -72,7 +72,7 @@ const Header = () => {
       </header>
 
       {/* Large Screen Navbar */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block fixed top-0 left-0 w-full z-20">
         {/* Top Red Header */}
         <div className="bg-custom-red text-white py-2">
           <div className="container mx-auto flex justify-between items-center px-4">

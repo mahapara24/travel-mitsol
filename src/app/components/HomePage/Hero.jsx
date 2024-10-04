@@ -8,11 +8,11 @@ import { MdArrowRightAlt } from "react-icons/md";
 const Hero = () => {
   return (
     <section
-      className="relative w-full h-[722px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      className="relative w-full h-screen  pt-60 bg-cover bg-center bg-no-repeat flex items-center justify-center"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       {/* Optional overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
 
       {/* Container for the X vector images */}
       <div className="relative z-10 top-[-150px] flex items-center justify-center">
