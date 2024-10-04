@@ -20,9 +20,9 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div className="overflow-hidden">
       {/* Small Screen Navbar */}
-      <header className="lg:hidden bg-black text-white py-4 fixed top-0 left-0 w-full z-20">
+      <header className="lg:hidden overflow-hidden bg-black text-white py-4 fixed top-0 left-0 w-full z-20">
         <div className="container mx-auto flex justify-between items-center px-4">
           {/* Logo */}
           <div className="flex items-center space-x-4">
@@ -236,7 +236,7 @@ const Header = () => {
           </div>
         </header>
       </div>
-    </>
+    </div>
   );
 };
 
