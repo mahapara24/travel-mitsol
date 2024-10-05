@@ -8,14 +8,14 @@ import { MdArrowRightAlt } from "react-icons/md";
 const Hero = () => {
   return (
     <section
-      className="relative w-full h-screen overflow-hidden bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      className="relative w-full h-screen  overflow-hidden bg-cover bg-center bg-no-repeat flex items-center justify-center"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       {/* Optional overlay */}
       <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
 
       {/* Container for the X vector images */}
-      <div className="relative z-10 flex items-center justify-center flex-col md:flex-row">
+      <div className="relative z-10 flex items-center  justify-center flex-col md:flex-row">
         {/* X vector on the left */}
         <div className="relative flex flex-col justify-center items-center w-[300px] h-auto mr-8">
           {/* First vector (bottom-left diagonal) */}
@@ -55,12 +55,12 @@ const Hero = () => {
             RELIABLE
             <br /> TRANSPORT
           </h1>
-          <div className="mt-4">
+          <div className="mt-4 ml-80">
             <p className="mt-4 text-[24px] md:text-[52px] leading-tight font-extrabold">
               SOLUTIONS FOR
               <br /> YOUR FREIGHT
             </p>
-            <button className="mt-6 px-6 flex justify-between space-x-2 items-center py-2 bg-white text-custom-red text-[18px] rounded-full font-normal duration-300 hover:text-white hover:bg-custom-red fade-in-animation">
+            <button className="mt-2 px-6 flex justify-between space-x-2 items-center py-2 bg-white text-custom-red text-[18px] rounded-full font-normal duration-300 hover:text-white hover:bg-custom-red fade-in-animation">
               Book Your Free Trial{" "}
               <span className="ml-2">
                 <MdArrowRightAlt size={30} />
