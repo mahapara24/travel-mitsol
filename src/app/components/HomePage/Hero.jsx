@@ -55,7 +55,7 @@ const Hero = () => {
             RELIABLE
             <br /> TRANSPORT
           </h1>
-          <div className="mt-4 ml-80">
+          <div className="mt-4 lg:ml-80">
             <p className="mt-4 text-[24px] md:text-[52px] leading-tight font-extrabold">
               SOLUTIONS FOR
               <br /> YOUR FREIGHT
