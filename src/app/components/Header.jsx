@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -11,45 +11,17 @@ import Image from "next/image";
 import { GoPerson } from "react-icons/go";
 import Logo from "../assets/apexloads 1.png";
 
-// Import GSAP
-import { gsap } from "gsap";
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const headerRef = useRef(null); // Ref for the header animation
-  const menuRef = useRef(null); // Ref for the mobile menu
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Slide in the header from the left
-  useEffect(() => {
-    gsap.fromTo(
-      headerRef.current,
-      { x: -100, opacity: 0 }, // Start off the screen from the left
-      { x: 0, opacity: 1, duration: 2, ease: "power4.inOut" } // Slide into view
-    );
-  }, []);
-
-  // Slide in the mobile menu items from the left when the menu opens
-  useEffect(() => {
-    if (isOpen) {
-      gsap.fromTo(
-        menuRef.current,
-        { x: -200, opacity: 0 }, // Start off the screen from the left
-        { x: 0, opacity: 1, duration: 2, ease: "power3.out" } // Slide into view
-      );
-    }
-  }, [isOpen]);
-
   return (
     <div className="overflow-hidden">
       {/* Small Screen Navbar */}
-      <header
-        ref={headerRef} // Reference to animate the header
-        className="lg:hidden overflow-hidden bg-black text-white py-4 fixed top-0 left-0 w-full z-20"
-      >
+      <header className="lg:hidden overflow-hidden bg-black text-white py-4 fixed top-0 left-0 w-full z-20 slide-in-top">
         <div className="container mx-auto flex justify-between items-center px-4">
           {/* Logo */}
           <div className="flex items-center space-x-4">
@@ -71,10 +43,7 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <nav
-            ref={menuRef} // Reference for the mobile menu animation
-            className="bg-black text-white py-4 px-4"
-          >
+          <nav className="bg-black text-white py-4 px-4 slide-in-left">
             <ul className="flex flex-col space-y-4">
               <li>
                 <Link href="/products" className="hover:text-custom-red">
@@ -102,10 +71,7 @@ const Header = () => {
       </header>
 
       {/* Large Screen Navbar */}
-      <div
-        ref={headerRef}
-        className="hidden lg:block fixed top-0 left-0 w-full z-20"
-      >
+      <div className="hidden lg:block fixed top-0 left-0 w-full z-20 slide-in-top">
         {/* Top Red Header */}
         <div className="bg-custom-red text-white py-2">
           <div className="container mx-auto flex justify-between items-center px-4">
@@ -113,14 +79,21 @@ const Header = () => {
             <div className="flex space-x-6 items-center">
               <Link
                 href="tel:+2540709677400"
-                className="flex items-center space-x-1 hover:underline"
+                className="flex items-center space-x-2 hover:underline"
+              >
+                <FiPhoneCall />
+                <span>+254 (0) 709 677 400</span>
+              </Link>
+              <Link
+                href="tel:+2540709677400"
+                className="flex items-center space-x-2 hover:underline"
               >
                 <FiPhoneCall />
                 <span>+254 (0) 709 677 400</span>
               </Link>
               <Link
                 href="mailto:info@apexloads.com"
-                className="flex items-center space-x-1 hover:underline"
+                className="flex items-center space-x-2 hover:underline"
               >
                 <FiMail />
                 <span>info@Apexloads.com</span>
@@ -187,10 +160,7 @@ const Header = () => {
 
         {/* Main Black Header */}
         <header className="bg-black text-white py-4">
-          <div
-            ref={headerRef}
-            className=" container mx-auto flex justify-between items-center px-4"
-          >
+          <div className="container mx-auto flex justify-between items-center px-4">
             {/* Logo */}
             <div className="flex items-center justify-between space-x-4">
               <Image src={Logo} alt="Apex Loads Logo" />
@@ -251,7 +221,7 @@ const Header = () => {
             <div className="flex space-x-4">
               <Link
                 href="/pricing"
-                className="bg-white text-custom-red px-4 py-1 flex justify-center items-center rounded-full  text-nowrap hover:bg-gray-200"
+                className="bg-white text-custom-red px-4 py-1 flex justify-center items-center rounded-full text-nowrap hover:bg-gray-200"
               >
                 Pricing
               </Link>

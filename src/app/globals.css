@@ -58,3 +58,32 @@ body {
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-top {
+  animation: slide-in-top 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
